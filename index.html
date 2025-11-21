@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Lab</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; }
+        #prompt {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Arial, sans-serif;
+            color: white;
+            font-size: 24px;
+            display: none;
+            pointer-events: none;
+        }
+        #instructions {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            z-index: 1000;
+        }
+        #instructions h1 {
+            font-size: 48px;
+            margin-bottom: 40px;
+        }
+        #instructions .controls {
+            font-size: 24px;
+            line-height: 2;
+            text-align: left;
+        }
+        #instructions .start {
+            margin-top: 60px;
+            font-size: 20px;
+            color: #ffcc00;
+            animation: blink 1.5s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+    <div id="instructions">
+        <h1>Birthday Lab</h1>
+        <div class="controls">
+            <div><strong>Click</strong> to enable mouse look</div>
+            <div><strong>W A S D</strong> - Move</div>
+            <div><strong>SPACE</strong> - Fly up</div>
+            <div><strong>SHIFT</strong> - Fly down</div>
+            <div><strong>E</strong> - Interact</div>
+        </div>
+        <div class="start">Press ENTER to start</div>
+    </div>
+    
+    <div id="prompt">Press E to use the Bridgeport</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+    <script src="main.js"></script>
+</body>
+</html>
